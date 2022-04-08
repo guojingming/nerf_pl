@@ -17,6 +17,11 @@ from utils import load_ckpt
 
 from datasets import dataset_dict
 
+import warnings
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)   #不添加DeprecationWarning是增加告警，添加DeprecationWarning是丢弃告警
+
+
 torch.backends.cudnn.benchmark = True
 
 def get_opts():
